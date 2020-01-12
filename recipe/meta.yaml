@@ -1,13 +1,13 @@
-{% set name = "dagster_dask" %}
-{% set version = "0.6.5" %}
+{% set name = "dagster-dask" %}
+{% set version = "0.6.7" %}
 
 package:
-  name: "{{ name|lower }}"
+  name: "{{ name.replace('-', '_') }}"
   version: "{{ version }}"
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 30546342a7c222b99164d0209dc6d20b35df2e9e82fdb5c53a7f2b58ee3d205f
+  sha256: cd8312218c565261019e6707a70396a79c266922da9cf529c3f7c2bd606a5340
 
 build:
   number: 0
@@ -35,7 +35,6 @@ about:
   home: "https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dask"
   license: Apache-2.0
   license_family: APACHE
-  license_file: LICENSE
   summary: "Package for using Dask as Dagster's execution engine."
 
 extra:
