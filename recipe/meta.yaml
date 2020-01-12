@@ -30,6 +30,10 @@ requirements:
 test:
   imports:
     - dagster_dask
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: "https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-dask"
